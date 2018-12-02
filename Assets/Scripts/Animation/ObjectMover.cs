@@ -17,7 +17,7 @@ public class ObjectMover : MonoBehaviour
     public void MoveTo(Vector2 to, float time)
     {
         KillPlaying();
-        _tweener = _rect.DOAnchoredMove(to, time);
+        _tweener = _rect.DOAnchorPos(to, time);
     }
 
     public void SetPosition(Vector2 pos)
