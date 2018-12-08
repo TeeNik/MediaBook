@@ -1,0 +1,28 @@
+﻿<book>
+	<contentTable>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+		<contentTableItem>
+			<title>Заголовок</title>
+			<pageNumber>12</pageNumber>
+		</contentTableItem>
+	</contentTable>
+</book>
