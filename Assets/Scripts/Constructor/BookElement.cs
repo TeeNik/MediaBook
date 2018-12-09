@@ -4,8 +4,7 @@ namespace Generator
 {
     public abstract class BookElement : MonoBehaviour
     {
-
-        public string Type;
+        protected abstract string Type { get; }
 
         public abstract void Init(string content);
 

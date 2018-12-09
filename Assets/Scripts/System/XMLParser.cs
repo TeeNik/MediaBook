@@ -6,7 +6,7 @@ public class XMLParser {
     public void GetNodes(TextAsset asset)
     {
         XmlDocument doc = new XmlDocument();
-        doc.Load(asset.text);
+        doc.LoadXml(asset.text);
         XmlElement root = doc.DocumentElement;
         foreach (XmlNode node in root)
         {
