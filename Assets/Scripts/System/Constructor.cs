@@ -10,8 +10,10 @@ public class Constructor : MonoBehaviour
 
     public void CreateItem(XmlNode node, Transform parent)
     {
-        var prototype = Elements.Find()
-        var element = Instantiate()
+        var prototype = Elements.Find(e => e.Type == node.Name);
+        Assert.Inv(prototype != null, "prototype != null", prototype);
+        var element = Instantiate(prototype, parent);
+        element.Init(node.ChildNodes);
     }
 
 }

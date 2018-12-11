@@ -5,6 +5,7 @@ public class DataLayer : MonoBehaviour
 {
 
     public static DataLayer Instance;
+    public Constructor Constructor;
     public XMLParser XmlParser;
 
     public TextAsset Asset;

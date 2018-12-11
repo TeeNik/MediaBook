@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Xml;
+using UnityEngine;
 
 namespace Generator
 {
     public abstract class BookElement : MonoBehaviour
     {
-        protected abstract string Type { get; }
+        public abstract string Type { get; }
 
-        public abstract void Init(string content);
+        public abstract void Init(XmlNodeList content);
 
     }
 

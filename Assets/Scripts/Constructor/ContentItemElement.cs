@@ -1,12 +1,13 @@
-﻿using Generator;
+﻿using System.Xml;
+using Generator;
 
 namespace Generator
 {
     public class ContentItemElement : BookElement
     {
-        protected override string Type => "ContentItem";
+        public override string Type => "ContentItem";
 
-        public override void Init(string content)
+        public override void Init(XmlNodeList content)
         {
             
         }
