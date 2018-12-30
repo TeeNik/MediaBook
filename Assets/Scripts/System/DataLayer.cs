@@ -14,7 +14,8 @@ public class DataLayer : MonoBehaviour
 	{
 	    Instance = this;
         XmlParser = new XMLParser();
-        XmlParser.GetNodes(Asset);
+        var root = XmlParser.GetRoot(Asset);
+        Constructor.GenerateBook(root);
 	}
 	
 }

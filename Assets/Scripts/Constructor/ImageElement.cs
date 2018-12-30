@@ -9,7 +9,7 @@ namespace Generator
     {
         public override string Type => "Image";
 
-        public override void Init(XmlNodeList content)
+        public override void Init(XmlNode content)
         {
             
         }
