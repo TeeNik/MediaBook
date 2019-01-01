@@ -3226,6 +3226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 803554766}
   - component: {fileID: 803554767}
+  - component: {fileID: 803554768}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -3259,8 +3260,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407a6d21859bd9244b2476907049756c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Constructor: {fileID: 0}
+  Constructor: {fileID: 803554768}
   Asset: {fileID: 4900000, guid: 954e10c8c9ae48a4ebe434bb8e8157f6, type: 3}
+--- !u!114 &803554768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803554765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9995d1124a8462418f9c7cacb9efbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Elements:
+  - {fileID: 1938962123294452940, guid: d37ad86e84a34a140955ec76503b29e8, type: 3}
+  BookRoot: {fileID: 863936533}
 --- !u!1 &835559806
 GameObject:
   m_ObjectHideFlags: 0
@@ -4008,6 +4024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee8c5c503bc08b40b5d2f3802899fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Title: {fileID: 0}
 --- !u!222 &1455358297
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5895,6 +5912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887114846298562729, guid: d37ad86e84a34a140955ec76503b29e8,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d37ad86e84a34a140955ec76503b29e8, type: 3}

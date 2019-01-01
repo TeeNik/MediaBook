@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Xml;
-using Generator;
-using UnityEngine;
+﻿using System.Xml;
+using TMPro;
 
 namespace Generator
 {
@@ -10,9 +7,11 @@ namespace Generator
     {
         public override string Type => "Text";
 
+        public TMP_Text Text;
+
         public override void Init(XmlNode content)
         {
-            
+            Text.text = content.InnerText;
         }
     }
 }

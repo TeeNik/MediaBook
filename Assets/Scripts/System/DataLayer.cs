@@ -7,7 +7,7 @@ public class DataLayer : MonoBehaviour
     public static DataLayer Instance;
     public Constructor Constructor;
     public XMLParser XmlParser;
-
+    public PageController PageController;
     public TextAsset Asset;
 
 	void Start ()
@@ -15,7 +15,8 @@ public class DataLayer : MonoBehaviour
 	    Instance = this;
         XmlParser = new XMLParser();
         var root = XmlParser.GetRoot(Asset);
-        Constructor.GenerateBook(root);
+        PageController = new PageController();
+        Constructor.GenerateBook(root, PageController);
 	}
 	
 }
