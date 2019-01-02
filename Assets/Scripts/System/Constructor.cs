@@ -23,10 +23,10 @@ public class Constructor : MonoBehaviour
         }
     }
 
-    private BookElement CreateItem(XmlNode node, Transform parent)
+    public BookElement CreateItem(XmlNode node, Transform parent)
     {
         var prototype = _elements.Find(e => e.Type == node.Name);
-        Assert.Inv(prototype != null, "prototype != null", prototype);
+        Assert.Inv(prototype != null, "prototype != null", node.Name);
         var element = Instantiate(prototype, parent);
         element.Init(node);
         return element;

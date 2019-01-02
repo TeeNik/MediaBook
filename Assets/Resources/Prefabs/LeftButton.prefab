@@ -367,6 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9177600f068afe43b5cc839edd521c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _property: -left
+  _isRight: 0
   _image: {fileID: 3321693374254458878}
+  _button: {fileID: 3321693374254458865}
   _text: {fileID: 3321693373089861912}

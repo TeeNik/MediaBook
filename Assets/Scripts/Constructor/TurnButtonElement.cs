@@ -21,7 +21,7 @@ namespace Generator
         public override void Init(XmlNode content)
         {
             var hexColor = content.Attributes["color"].InnerText;
-            var text = content.Attributes["text"].InnerText;
+            var text = content.InnerText;
 
             _image.color = Utils.ParseColor(hexColor);
             _text.text = text;

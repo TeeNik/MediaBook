@@ -5,7 +5,7 @@ namespace Generator
 {
     public class TextElement : BookElement
     {
-        public override string Type => "Text";
+        public override string Type => "text";
 
         public TMP_Text Text;
 

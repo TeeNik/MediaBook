@@ -294,4 +294,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isRight: 1
   _image: {fileID: 8456048488536845269}
+  _button: {fileID: 8456048488536845268}
   _text: {fileID: 8456048488516226620}

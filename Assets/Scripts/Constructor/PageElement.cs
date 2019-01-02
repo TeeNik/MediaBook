@@ -10,12 +10,12 @@ public class PageElement : BookElement
 
     public override void Init(XmlNode content)
     {
-        /*var constructor = DataLayer.Instance.Constructor;
+        var title = content.Attributes["title"].InnerText;
+        Title.text = title;
+        var constructor = DataLayer.Instance.Constructor;
         foreach (XmlNode node in content)
         {
             constructor.CreateItem(node, transform);
-        }*/
-        var title = content.Attributes["title"].InnerText;
-        Title.text = title;
+        }
     }
 }

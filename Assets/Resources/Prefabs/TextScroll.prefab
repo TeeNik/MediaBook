@@ -123,8 +123,9 @@ GameObject:
   - component: {fileID: 2974524592081891564}
   - component: {fileID: 2974524592081891567}
   - component: {fileID: 2974524592081891566}
+  - component: {fileID: 3466643487197978650}
   m_Layer: 0
-  m_Name: TextScrollElement
+  m_Name: TextScroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,6 +233,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &3466643487197978650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2974524592081891552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac51b9ab33fee847a643ba7a1b94960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 2974524592707609872}
 --- !u!1 &2974524592707609874
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +468,7 @@ MonoBehaviour:
     spaceCount: 228
     wordCount: 230
     linkCount: 0
-    lineCount: 30
+    lineCount: 13
     pageCount: 1
     materialCount: 2
   m_havePropertiesChanged: 0
