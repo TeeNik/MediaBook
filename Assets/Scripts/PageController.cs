@@ -28,7 +28,7 @@ public class PageController
     public void OpenPage(int number)
     {
         Assert.Inv(number < _pages.Count, "number < _pages.Count");
-        Assert.Inv(number > 0, "number > 0");
+        Assert.Inv(number >= 0, "number >= 0");
 
         _pages[_current].gameObject.SetActive(false);
         _current = number;

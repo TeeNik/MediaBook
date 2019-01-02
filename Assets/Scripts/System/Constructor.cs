@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Constructor : MonoBehaviour
 {
-    //[SerializeField] private List<BookElement> Elements;
     private List<BookElement> _elements;
     [SerializeField] private Transform _bookRoot;
 
@@ -19,8 +18,11 @@ public class Constructor : MonoBehaviour
     {
         foreach (XmlNode node in root)
         {
-            controller.AddPage((PageElement)CreateItem(node, _bookRoot));
+            var page = (PageElement)CreateItem(node, _bookRoot);
+            page.gameObject.SetActive(false);
+            controller.AddPage(page);
         }
+        controller.OpenPage(0);
     }
 
     public BookElement CreateItem(XmlNode node, Transform parent)
