@@ -3,20 +3,25 @@ using UnityEngine;
 
 public class DataLayer : MonoBehaviour
 {
-
-    public static DataLayer Instance;
-    public Constructor Constructor;
-    public XMLParser XmlParser;
-    public PageController PageController;
     public TextAsset Asset;
+    [SerializeField] private Transform _bookRoot;
 
-	void Start ()
+    public static DataLayer Instance { get; private set; }
+    public Constructor Constructor { get; private set; }
+    public XMLParser XmlParser { get; private set; }
+    public PageController PageController { get; private set; }
+    public BookResources BookResources { get; private set; }
+
+    void Start ()
 	{
 	    Instance = this;
         XmlParser = new XMLParser();
-        var root = XmlParser.GetRoot(Asset);
+        BookResources = new BookResources();
+        Constructor = new Constructor();
         PageController = new PageController();
-        Constructor.Init();
+
+        var root = XmlParser.GetRoot(Asset);
+        Constructor.Init(_bookRoot);
         Constructor.GenerateBook(root, PageController);
 	}
 	
