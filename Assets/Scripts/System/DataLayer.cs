@@ -11,10 +11,11 @@ public class DataLayer : MonoBehaviour
     public XMLParser XmlParser { get; private set; }
     public PageController PageController { get; private set; }
     public BookResources BookResources { get; private set; }
-
+    public CommandSubject Messages { get; private set; }
     void Start ()
 	{
 	    Instance = this;
+        Messages = new CommandSubject();
         XmlParser = new XMLParser();
         BookResources = new BookResources();
         Constructor = new Constructor();
