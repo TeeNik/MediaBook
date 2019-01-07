@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using UIWindow;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ImageViewWindow : MonoBehaviour
+public class ImageViewWindow : Window
 {
+    [SerializeField] private Image _image;
 
-    void Start()
+    public override void Init()
     {
+        base.Init();
         var messages = DataLayer.Instance.Messages;
-        messages.Subscribe<OpenImageViewMsg>(OnOpenViewMsg);
+        _subscriptions.Add(messages.Subscribe<OpenImageViewMsg>(OnOpenViewMsg));
     }
 
     private void OnOpenViewMsg(OpenImageViewMsg msg)
     {
-        
+        OpenWindow();
     }
 }

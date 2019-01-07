@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Utils
 {
@@ -10,4 +11,13 @@ public class Utils
         return newColor;
     }
 
+    public static void DisposeAndSetNull<T>(ref T some) where T : class
+    {
+        var disposable = some as IDisposable;
+        if (disposable != null)
+        {
+            disposable.Dispose();
+            some = null;
+        }
+    }
 }
