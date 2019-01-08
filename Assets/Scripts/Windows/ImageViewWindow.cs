@@ -15,6 +15,9 @@ public class ImageViewWindow : Window
 
     private void OnOpenViewMsg(OpenImageViewMsg msg)
     {
+        var sprite = DataLayer.Instance.BookResources.Get<Sprite>(msg.spriteName);
+        _image.sprite = sprite;
         OpenWindow();
+
     }
 }
