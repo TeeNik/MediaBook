@@ -1,9 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <book>
+  <page title="Ренессанс" image="david">
+    <turn_button-right color="#51B200">Далее</turn_button-right>
+  </page>
   <page title="Оглавление">
     <content_grid>
       <content_item page="1">Микеланджело Буонарроти</content_item>
     </content_grid>
+    <turn_button-left color="#F19F00">Назад</turn_button-left>
     <turn_button-right color="#51B200">Далее</turn_button-right>
   </page>
   <page title="Микеланджело Буонарроти">
