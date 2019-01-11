@@ -29,7 +29,7 @@ namespace Generator
             }
 
             _next.onClick.AddListener(NextImage);
-            _next.on
+
             _prev.onClick.AddListener(PrevImage);
         }
 
