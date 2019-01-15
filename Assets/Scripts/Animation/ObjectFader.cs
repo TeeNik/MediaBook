@@ -8,26 +8,34 @@ using UnityEngine.UI;
 public class ObjectFader : MonoBehaviour
 {
     public bool IsHideOnStart;
-    public CanvasGroup _canvas;
+    public CanvasGroup Canvas;
 
-    public void FadeTo(float endValue, float time, Action OnComplete = null)
+    void Start()
     {
-        _canvas.DOFade(endValue, time).OnComplete(()=>
+        if (IsHideOnStart)
         {
-            OnComplete?.Invoke();
+            SetAlpha(0);
+        }
+    }
+
+    public void FadeTo(float endValue, float time, Action onComplete = null)
+    {
+        Canvas.DOFade(endValue, time).OnComplete(()=>
+        {
+            onComplete?.Invoke();
         });
     }
 
-    public void Fade(float from, float to, float time, Action OnComplete = null)
+    public void Fade(float from, float to, float time, Action onComplete = null)
     {
         SetAlpha(from);
-        FadeTo(to, time, OnComplete);
+        FadeTo(to, time, onComplete);
     }
 
     public void SetAlpha(float value)
     {
-        _canvas.alpha = value;
+        Canvas.alpha = value;
     }
 
-    public float Alpha => _canvas.alpha;
+    public float Alpha => Canvas.alpha;
 }

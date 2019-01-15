@@ -8,9 +8,5 @@ namespace Generator
         public abstract string Type { get; }
 
         public abstract void Init(XmlNode content);
-
     }
-
 }
-
-

@@ -355,6 +355,9 @@ GameObject:
   - component: {fileID: 8044495550354604828}
   - component: {fileID: 1174290408462624882}
   - component: {fileID: 5950000019511217171}
+  - component: {fileID: 3869536333804067111}
+  - component: {fileID: 1000154765612281910}
+  - component: {fileID: 8931075014271197648}
   m_Layer: 0
   m_Name: LeftButton
   m_TagString: Untagged
@@ -461,6 +464,46 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3869536333804067111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812061488815774816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d79af990cf3d994cbd03bd51127f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fader: {fileID: 1000154765612281910}
+  _speed: 0.35
+--- !u!114 &1000154765612281910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812061488815774816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e339ebef73c138e41851500b15350685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsHideOnStart: 1
+  Canvas: {fileID: 8931075014271197648}
+--- !u!225 &8931075014271197648
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2812061488815774816}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2964384295193052286
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +516,9 @@ GameObject:
   - component: {fileID: 29483761458037332}
   - component: {fileID: 8053540927629496337}
   - component: {fileID: 1890032489130562681}
+  - component: {fileID: 1876938856123473235}
+  - component: {fileID: 1716501760593956143}
+  - component: {fileID: 4265304115972489678}
   m_Layer: 0
   m_Name: RightButton
   m_TagString: Untagged
@@ -579,6 +625,46 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1876938856123473235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964384295193052286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d79af990cf3d994cbd03bd51127f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fader: {fileID: 1716501760593956143}
+  _speed: 0.35
+--- !u!114 &1716501760593956143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964384295193052286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e339ebef73c138e41851500b15350685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsHideOnStart: 1
+  Canvas: {fileID: 4265304115972489678}
+--- !u!225 &4265304115972489678
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964384295193052286}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8730201630594229406
 GameObject:
   m_ObjectHideFlags: 0

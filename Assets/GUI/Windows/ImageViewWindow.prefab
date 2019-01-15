@@ -116,7 +116,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5215070588149710983}
-        m_MethodName: HideWindow
+        m_MethodName: CloseWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -425,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WindowPanel: {fileID: 6260838118397515195}
+  Type: 0
   _image: {fileID: 5599009029217165904}
 --- !u!1 &6260838118397515195
 GameObject:
