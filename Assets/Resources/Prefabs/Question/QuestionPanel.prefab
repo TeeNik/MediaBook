@@ -107,10 +107,10 @@ RectTransform:
   m_Father: {fileID: 1885273753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 450, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 20, y: 0}
+  m_SizeDelta: {x: -40, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1331838640
 CanvasRenderer:
@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: "\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u044B\u0444\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u044B\u0444\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u0444\u044B\u0432\u0430\u044B\u0444\u0432\u0430\u0444\u044B\u0432\u0430\u044B\u0444\u0432\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0700544d0ebea2144a19f797e2e67ae9, type: 2}
   m_sharedMaterial: {fileID: 21752674190943654, guid: 0700544d0ebea2144a19f797e2e67ae9,
@@ -210,13 +210,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1331838639}
-    characterCount: 0
+    characterCount: 60
     spriteCount: 0
     spaceCount: 0
-    wordCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
@@ -344,8 +344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -137.5}
-  m_SizeDelta: {x: 0, y: -275}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 0, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8313736770998634550
 CanvasRenderer:
@@ -373,7 +373,7 @@ MonoBehaviour:
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 15
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -505,7 +505,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 275}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5935779040965800946
 CanvasRenderer:
