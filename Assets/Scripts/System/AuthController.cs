@@ -10,7 +10,8 @@ public class AuthController : MonoBehaviour
 
     public void Auth(string name, string group)
     {
-
+        Name = name;
+        Group = Name;
     }
 
 }
