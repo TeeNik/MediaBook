@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AuthController : MonoBehaviour
+public class AuthController
 {
 
     public string Name { get; private set; }

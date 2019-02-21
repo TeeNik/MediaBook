@@ -14,6 +14,7 @@ public class DataLayer : MonoBehaviour
     public BookResources BookResources { get; private set; }
     public CommandSubject Messages { get; private set; }
     public WindowController WindowController;
+    public AuthController AuthController { get; private set; }
 
     void Start ()
 	{
@@ -23,6 +24,7 @@ public class DataLayer : MonoBehaviour
         BookResources = new BookResources();
         Constructor = new Constructor();
         PageController = new PageController();
+        AuthController = new AuthController();
         WindowController.Init();
 
         var root = XmlParser.GetRoot(Asset);
