@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AuthWindow : MonoBehaviour
 {
 
-    public InputField NameInput;
-    public InputField GroupInput;
+    public TMP_InputField NameInput;
+    public TMP_InputField GroupInput;
     public Button SubmitButton;
 
     void Start()
@@ -18,6 +16,11 @@ public class AuthWindow : MonoBehaviour
 
     private void SubmitAuth()
     {
-        DataLayer.Instance.        
+        var name = NameInput.text;
+        var group = GroupInput.text;
+        if (string.IsNullOrEmpty(name) && string.IsNullOrEmpty(group))
+        {
+            DataLayer.Instance.AuthController.Auth(name, group);
+        }
     }
 }
