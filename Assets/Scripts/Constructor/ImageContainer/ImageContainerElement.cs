@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,11 @@ namespace Generator
             foreach (XmlNode node in content)
             {
                 var item = constructor.CreateItem(node, _content);
+                item.gameObject.SetActive(false);
                 _list.Add(item.gameObject);
             }
-
+            _list.First().gameObject.SetActive(true);
             _next.onClick.AddListener(NextImage);
-
             _prev.onClick.AddListener(PrevImage);
         }
 
@@ -46,7 +47,7 @@ namespace Generator
         public void OpenPage(int number)
         {
             int count = _list.Count;
-            if (number > count)
+            if (number >= count)
             {
                 number = 0;
             }

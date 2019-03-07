@@ -1,18 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ImageElementVertical : MonoBehaviour
+﻿namespace Generator
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ImageElementVertical : ImageElement
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override string Type => "image_item_vert";
     }
 }

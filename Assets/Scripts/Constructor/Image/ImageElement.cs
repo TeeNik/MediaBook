@@ -28,11 +28,4 @@ namespace Generator
             DataLayer.Instance.Messages.OnNext(new OpenImageViewMsg{spriteName = _spriteName});
         }
     }
-
-    public class ImageElementVertical : ImageElement
-    {
-        public override string Type => "image_item_vert";
-    }
-
 }
-
