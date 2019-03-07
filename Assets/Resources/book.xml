@@ -20,6 +20,7 @@
     <right_side>
       <image_container>
         <image_item src="sotvorenie_adama"></image_item>
+        <image_item src="Venus"></image_item>
       </image_container>
     </right_side>
     <turn_button-left color="#F19F00">Назад</turn_button-left>
