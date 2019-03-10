@@ -9,7 +9,7 @@ namespace Generator
 {
     public class ImageContainerElement : BookElement
     {
-        public override string Type => "image_container";
+        public override string Type => ElementTag.ImageContainer;
 
         [SerializeField] private Transform _content;
         [SerializeField] private Button _next;
