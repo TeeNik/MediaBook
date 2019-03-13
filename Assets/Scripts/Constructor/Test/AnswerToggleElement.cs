@@ -10,7 +10,6 @@ namespace Generator
         public override string Type => ElementTag.AnswerToggle;
         public string Id { get; private set; }
 
-        [SerializeField] private Button _button;
         [SerializeField] private TMP_Text _text;
         [SerializeField] private Toggle _toggle;
 

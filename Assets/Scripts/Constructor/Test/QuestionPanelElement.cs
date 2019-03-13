@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Generator
 {
-    public class QuestionPanelButton : BookElement
+    public class QuestionPanelElement : BookElement
     {
         public override string Type => ElementTag.QuestionPanel;
 

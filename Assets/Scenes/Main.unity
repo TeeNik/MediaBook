@@ -3055,7 +3055,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 537769568}
   toggleTransition: 1
   graphic: {fileID: 2117512186}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 762609656}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3447,6 +3447,11 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1048651098298185793, guid: 1786e2436f8f697439d97733e2baffa9,
+        type: 3}
+      propertyPath: m_Group
+      value: 
+      objectReference: {fileID: 762609656}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1786e2436f8f697439d97733e2baffa9, type: 3}
 --- !u!224 &9203414175998865737 stripped
