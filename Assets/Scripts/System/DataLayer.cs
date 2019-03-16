@@ -1,6 +1,8 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections;
+using System.Runtime.CompilerServices;
 using UIWindow;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class DataLayer : MonoBehaviour
 {
@@ -30,6 +32,30 @@ public class DataLayer : MonoBehaviour
         var root = XmlParser.GetRoot(Asset);
         Constructor.Init(_bookRoot);
         Constructor.GenerateBook(root, PageController);
+        SendRequest();
 	}
-	
+
+    public void SendRequest()
+    {
+        StartCoroutine(GetText());
+    }
+
+    IEnumerator GetText()
+    {
+        UnityWebRequest www = UnityWebRequest.Get("http://localhost:8080");
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            // Show results as text
+            Debug.Log(www.downloadHandler.text);
+
+            // Or retrieve results as binary data
+            byte[] results = www.downloadHandler.data;
+        }
+    }
 }
