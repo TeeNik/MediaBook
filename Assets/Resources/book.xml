@@ -68,6 +68,7 @@
         <turn_button-right color="#51B200">Далее</turn_button-right>
     </page>
     <page title="Тест">
+        <question 
         <content_grid>
             <content_item page="1">Микеланджело Буонарроти</content_item>
         </content_grid>

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Generator
 {
-    public class AnswerToggleElement : BookElement
+    public class AnswerToggle : BookElement
     {
         public override string Type => ElementTag.AnswerToggle;
         public string Id { get; private set; }

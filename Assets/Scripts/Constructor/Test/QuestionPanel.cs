@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Generator
 {
-    public class QuestionPanelElement : BookElement
+    public class QuestionPanel : BookElement
     {
         public override string Type => ElementTag.QuestionPanel;
 
@@ -14,18 +14,18 @@ namespace Generator
         [SerializeField] private Transform _container;
         [SerializeField] private ToggleGroup group;
 
-        private List<AnswerToggleElement> _toggles;
+        private List<AnswerToggle> _toggles;
         private string _answerId;
 
         public override void Init(XmlNode content)
         {
             var constructor = DataLayer.Instance.Constructor;
-            _toggles = new List<AnswerToggleElement>();
+            _toggles = new List<AnswerToggle>();
             _answerId = content.Attributes["answer"].InnerText;
 
             foreach (XmlNode node in content)
             {
-                AnswerToggleElement item = constructor.CreateItem(node, _container) as AnswerToggleElement;
+                AnswerToggle item = constructor.CreateItem(node, _container) as AnswerToggle;
                 item.SetToggleGroup(group);
             }
         }
