@@ -14,7 +14,9 @@ namespace Generator
         public override string Type => ElementTag.TestProgressItem;
         public override void Init(XmlNode content)
         {
+         
             
+
         }
     }
 }
