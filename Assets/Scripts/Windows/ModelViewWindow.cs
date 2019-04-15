@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 public class ModelViewWindow : Window, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform Object;
+    public Transform Container;
+
     private float _sensitivity = 0.5f;
     private Vector3 _mouseReference;
     private Vector3 _mouseOffset;
