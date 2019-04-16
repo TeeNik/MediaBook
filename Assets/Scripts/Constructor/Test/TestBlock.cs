@@ -10,10 +10,26 @@ namespace Generator
     {
         public override string Type => ElementTag.TestBlock;
 
+        [SerializeField] private Transform _container;
+        private List<QuestionPanel> _questions;
+        private List<TestProgressItem> _progressItems;
+
         public override void Init(XmlNode content)
+        {
+            var constructor = DataLayer.Instance.Constructor;
+            _questions = new List<QuestionPanel>();
+
+            foreach (XmlNode node in content)
+            {
+                QuestionPanel item = constructor.CreateItem(node, _container) as QuestionPanel;
+                _questions.Add(item);
+            }
+        }
+
+
+        private void OnProgressItemClick()
         {
 
         }
     }
 }
-
