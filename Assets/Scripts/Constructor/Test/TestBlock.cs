@@ -14,6 +14,8 @@ namespace Generator
         private List<QuestionPanel> _questions;
         private List<TestProgressItem> _progressItems;
 
+        private const string _progressItemTag = "<test_progress_item color>{}</test_progress_item>";
+
         public override void Init(XmlNode content)
         {
             var constructor = DataLayer.Instance.Constructor;
