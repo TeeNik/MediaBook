@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 namespace Generator
 {
-    public class TestProgressItem : BookElement
+    public class TestProgressItem : MonoBehaviour
     {
         [SerializeField] private Image _circle;
         [SerializeField] private Image _border;
         [SerializeField] private TMP_Text _number;
 
-        public override string Type => ElementTag.TestProgressItem;
-        public override void Init(XmlNode content)
+        public void Init(int num)
         {
-         
-            
-
+            _number.text = num.ToString();
+            _circle.color = UIColor.Yellow;
         }
     }
 }
