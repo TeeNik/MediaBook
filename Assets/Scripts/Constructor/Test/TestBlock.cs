@@ -30,6 +30,8 @@ namespace Generator
                 QuestionPanel item = constructor.CreateItem(node, _container) as QuestionPanel;
                 _questions.Add(item);
             }
+
+            _answerButton.onClick.AddListener(Answer);
         }
 
         private void OnProgressItemClick()
@@ -48,6 +50,18 @@ namespace Generator
             if (_questions[_currentQuestion].CheckAnswer())
             {
                 _correct++;
+            }
+
+            if (_currentQuestion == _progressItems.Count)
+            {
+                DataLayer.Instance.PageController.NextPage();
+            }
+            else
+            {
+                SetAnswerButtonEnable(false);
+                _progressItems[_currentQuestion].gameObject.SetActive(false);
+                ++_currentQuestion;
+                _progressItems[_currentQuestion].gameObject.SetActive(true);
             }
         }
     }
