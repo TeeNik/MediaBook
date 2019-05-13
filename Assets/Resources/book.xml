@@ -10,6 +10,25 @@
         <turn_button-left color="#F19F00">Назад</turn_button-left>
         <turn_button-right color="#51B200">Далее</turn_button-right>
     </page>
+    <page title="Контрольные вопросы">
+        <test_block>
+            <questionPanel answer="1">
+                <answer_toggle id="1">
+                    Верный ответ
+                </answer_toggle>
+                <answer_toggle id="2">
+                    Неверный ответ
+                </answer_toggle>
+                <answer_toggle id="3">
+                    Неверный ответ
+                </answer_toggle>
+                <answer_toggle id="4">
+                    Неверный ответ
+                </answer_toggle>
+            </questionPanel>
+            
+        </test_block>
+    </page>
     <page title="Микеланджело Буонарроти">
         <left_side>
             <text>
