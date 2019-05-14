@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using UnityEngine;
@@ -10,9 +11,11 @@ namespace Generator
     {
         public override string Type => ElementTag.QuestionPanel;
 
+        public bool IsAnyToggleOn => _group.AnyTogglesOn();
+
         [SerializeField] private TMPro.TMP_Text _question;
         [SerializeField] private Transform _container;
-        [SerializeField] private ToggleGroup group;
+        [SerializeField] private ToggleGroup _group;
 
         private List<AnswerToggle> _toggles;
         private string _answerId;
@@ -26,7 +29,8 @@ namespace Generator
             foreach (XmlNode node in content)
             {
                 AnswerToggle item = constructor.CreateItem(node, _container) as AnswerToggle;
-                item.SetToggleGroup(group);
+                item.SetToggleGroup(_group);
+                _toggles.Add(item);
             }
         }
 

@@ -12,8 +12,10 @@ namespace Generator
         public override string Type => ElementTag.TestBlock;
 
         [SerializeField] private Transform _container;
-        [SerializeField] private GameObject _progressItem;
+        [SerializeField] private TestProgressItem _progressPrefab;
+        [SerializeField] private Transform _progressContainer;
         [SerializeField] private Button _answerButton;
+        [SerializeField] private TestResultPanel _resultPanel;
         private List<QuestionPanel> _questions;
         private List<TestProgressItem> _progressItems;
 
@@ -24,19 +26,20 @@ namespace Generator
         {
             var constructor = DataLayer.Instance.Constructor;
             _questions = new List<QuestionPanel>();
+            _progressItems = new List<TestProgressItem>();
 
+            int num = 0;
             foreach (XmlNode node in content)
             {
                 QuestionPanel item = constructor.CreateItem(node, _container) as QuestionPanel;
                 _questions.Add(item);
+
+                var progressItem = Instantiate(_progressPrefab, _progressContainer);
+                progressItem.Init(++num);
+                _progressItems.Add(progressItem);
             }
 
             _answerButton.onClick.AddListener(Answer);
-        }
-
-        private void OnProgressItemClick()
-        {
-
         }
 
         private void SetAnswerButtonEnable(bool value)
@@ -47,21 +50,27 @@ namespace Generator
 
         private void Answer()
         {
+            if (!_questions[_currentQuestion].IsAnyToggleOn)
+            {
+                return;
+            }
+
             if (_questions[_currentQuestion].CheckAnswer())
             {
                 _correct++;
             }
 
-            if (_currentQuestion == _progressItems.Count)
+            if (_currentQuestion == _questions.Count -1)
             {
-                DataLayer.Instance.PageController.NextPage();
+                _questions[_currentQuestion].gameObject.SetActive(false);
+                _resultPanel.Show(_correct, _questions.Count);
             }
             else
             {
                 SetAnswerButtonEnable(false);
-                _progressItems[_currentQuestion].gameObject.SetActive(false);
+                _questions[_currentQuestion].gameObject.SetActive(false);
                 ++_currentQuestion;
-                _progressItems[_currentQuestion].gameObject.SetActive(true);
+                _questions[_currentQuestion].gameObject.SetActive(true);
             }
         }
     }
