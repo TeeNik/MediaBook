@@ -7,6 +7,7 @@ namespace UIWindow
     public enum WindowType
     {
         ImageView,
+        ModelView,
     }
 
     public class Window : MonoBehaviour

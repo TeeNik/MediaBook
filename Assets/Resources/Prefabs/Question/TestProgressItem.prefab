@@ -245,8 +245,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6690344223953058940}
   - component: {fileID: 6690344223953058942}
-  - component: {fileID: 6690344223953058943}
   - component: {fileID: 9198138110451210446}
+  - component: {fileID: 1803588490879788156}
   m_Layer: 0
   m_Name: TestProgressItem
   m_TagString: Untagged
@@ -283,7 +283,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6690344223953058941}
   m_CullTransparentMesh: 0
---- !u!114 &6690344223953058943
+--- !u!114 &9198138110451210446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6690344223953058941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb648fcffc498c4e9b0d458d91baa4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circle: {fileID: 1803588490879788156}
+  _border: {fileID: 4082093869987539142}
+  _number: {fileID: 5375037006901369180}
+--- !u!114 &1803588490879788156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31779784, g: 0.6981132, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.6166667, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -312,18 +327,3 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &9198138110451210446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690344223953058941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb648fcffc498c4e9b0d458d91baa4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _circle: {fileID: 6690344223953058943}
-  _border: {fileID: 4082093869987539142}
-  _number: {fileID: 5375037006901369180}

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Xml;
-using Generator;
+﻿using System.Xml;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,8 +19,8 @@ namespace Generator
             {
                 var page = content.Attributes["page"];
                 Assert.Inv(page != null, "page != null");
-                var num = Convert.ToInt32(page.InnerText);
-                DataLayer.Instance.PageController.OpenPage(num);
+                var id = page.InnerText;
+                DataLayer.Instance.PageController.OpenPageById(id);
             });
         }
     }

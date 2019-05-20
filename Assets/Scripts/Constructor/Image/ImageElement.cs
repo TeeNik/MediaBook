@@ -11,6 +11,8 @@ namespace Generator
         [SerializeField] private Image _image;
         [SerializeField] private Button _button;
         private string _spriteName;
+        private bool _isModel;
+        private GameObject _object;
 
         public override void Init(XmlNode content)
         {
@@ -21,11 +23,28 @@ namespace Generator
             var sprite = DataLayer.Instance.BookResources.Get<Sprite>(_spriteName);
             _image.sprite = sprite;
             _button.onClick.AddListener(OpenView);
+
+            if (content.Attributes["is_model"] != null && content.Attributes["is_model"].InnerText == "true")
+            {
+                _isModel = true;
+                var modelSrc = content.Attributes["model_src"];
+                Assert.Inv(modelSrc != null, "modelSrc != null");
+                _object = DataLayer.Instance.BookResources.Get<GameObject>(modelSrc.InnerText);
+                Assert.Inv(_object != null, "_object != null");
+
+            }
         }
 
         private void OpenView()
         {
-            DataLayer.Instance.Messages.OnNext(new OpenImageViewMsg{spriteName = _spriteName});
+            if (_isModel)
+            {
+                DataLayer.Instance.Messages.OnNext(new OpemModelViewMsg { go = _object });
+            }
+            else
+            {
+                DataLayer.Instance.Messages.OnNext(new OpenImageViewMsg { spriteName = _spriteName });
+            }
         }
     }
 }

@@ -35,4 +35,14 @@ public class PageController
         _pages[_current].gameObject.SetActive(true);
     }
 
+    public void OpenPageById(string id)
+    {
+        Assert.Inv(id != null, "id != null");
+        _pages[_current].gameObject.SetActive(false);
+        var page = _pages.Find(p => p.Id == id);
+        Assert.Inv(page != null, $"Page with id: {id} not found");
+        _current = _pages.IndexOf(page);
+        _pages[_current].gameObject.SetActive(true);
+    }
+
 }

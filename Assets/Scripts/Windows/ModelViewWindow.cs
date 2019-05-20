@@ -1,4 +1,5 @@
-﻿using UIWindow;
+﻿using System;
+using UIWindow;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public class ModelViewWindow : Window, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -11,6 +12,25 @@ public class ModelViewWindow : Window, IBeginDragHandler, IDragHandler, IEndDrag
     private Vector3 _mouseOffset;
     private Vector3 _rotation = Vector3.zero;
     private bool _isRotating;
+
+    public override void Init()
+    {
+        base.Init();
+        var messages = DataLayer.Instance.Messages;
+        _subscriptions.Add(messages.Subscribe<OpemModelViewMsg>(OnOpenModelMsg));
+    }
+
+    private void OnOpenModelMsg(OpemModelViewMsg msg)
+    {
+        if (Object != null)
+        {
+            var toDelete = Object;
+            Destroy(toDelete.gameObject);
+        }
+
+        Object = Instantiate(msg.go, Container).transform;
+        OpenWindow();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {

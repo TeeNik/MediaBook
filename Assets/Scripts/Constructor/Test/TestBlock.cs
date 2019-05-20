@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using Generator;
 using UnityEngine;
@@ -33,10 +34,12 @@ namespace Generator
             {
                 QuestionPanel item = constructor.CreateItem(node, _container) as QuestionPanel;
                 _questions.Add(item);
+                item.gameObject.SetActive(false);
 
                 var progressItem = Instantiate(_progressPrefab, _progressContainer);
                 progressItem.Init(++num);
                 _progressItems.Add(progressItem);
+                _questions.First().gameObject.SetActive(true);
             }
 
             _answerButton.onClick.AddListener(Answer);
@@ -64,10 +67,13 @@ namespace Generator
             {
                 _questions[_currentQuestion].gameObject.SetActive(false);
                 _resultPanel.Show(_correct, _questions.Count);
+                _answerButton.gameObject.SetActive(false);
+                _progressItems[_currentQuestion].SetColor(Color.green);
             }
             else
             {
-                SetAnswerButtonEnable(false);
+                //SetAnswerButtonEnable(false);
+                _progressItems[_currentQuestion].SetColor(Color.green);
                 _questions[_currentQuestion].gameObject.SetActive(false);
                 ++_currentQuestion;
                 _questions[_currentQuestion].gameObject.SetActive(true);

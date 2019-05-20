@@ -276,8 +276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WindowPanel: {fileID: 6266026190994478610}
-  Type: 0
+  Type: 1
   Object: {fileID: 0}
+  Container: {fileID: 3220997322919558141}
 --- !u!1 &5594666507401945519
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
-﻿using System.Xml;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +13,12 @@ namespace Generator
         public void Init(int num)
         {
             _number.text = num.ToString();
-            _circle.color = UIColor.Yellow;
+            //_circle.color = UIColor.Orange;
+        }
+
+        public void SetColor(Color color)
+        {
+            _circle.color = color;
         }
     }
 }
