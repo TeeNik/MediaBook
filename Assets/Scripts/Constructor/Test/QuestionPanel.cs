@@ -25,6 +25,7 @@ namespace Generator
             var constructor = DataLayer.Instance.Constructor;
             _toggles = new List<AnswerToggle>();
             _answerId = content.Attributes["answer"].InnerText;
+            _question.text = content.Attributes["text"].InnerText;
 
             foreach (XmlNode node in content)
             {
