@@ -12,7 +12,7 @@
         <turn_button-left color="#F19F00">Назад</turn_button-left>
         <turn_button-right color="#51B200">Далее</turn_button-right>
     </page>
-    <page title="Замок Святого Ангела" id="1">
+    <page title="Заголовок" id="1">
         <left_side>
             <text>
                 Замок Святого Ангела (итал. Castel Sant'Angelo, лат. Castellum Sancti Angeli) — римский архитектурный памятник, также известный как Мавзолей Адриана (лат. Mausoleum Hadriani), иногда называемый Печальный Замок, представляющий собой высокое цилиндрическое здание в парке Адриано на берегу Тибра. Донжон-усыпальница, квадратный двор с окружающей его стеной и мост через реку, украшенный скульптурами, образуют городской ансамбль. Когда-то считался самым высоким зданием в Риме.
@@ -23,7 +23,7 @@
         </left_side>
         <right_side>
             <image_container>
-                <image_item src="castel-santangelo" is_model="true" model_src="Models/Castle_Sant"></image_item>
+                <image_item src="castel-santangelo" is_model="true" model_src="Models/Kogura"></image_item>
                 <image_item src="castel-santangelo2"></image_item>
                 <image_item src="castel-santangelo3"></image_item>
             </image_container>
@@ -71,7 +71,7 @@
     </page>
     <page title="Контрольные вопросы" id="4">
         <test_block>
-            <questionPanel answer="1">
+            <questionPanel answer="1" text="Вопрос 1">
                 <answer_toggle id="1">
                     Верный ответ
                 </answer_toggle>
@@ -85,7 +85,7 @@
                     Неверный ответ
                 </answer_toggle>
             </questionPanel>
-            <questionPanel answer="1">
+            <questionPanel answer="1" text="Вопрос 2">
                 <answer_toggle id="1">
                     Верный ответ
                 </answer_toggle>
@@ -99,7 +99,7 @@
                     Неверный ответ
                 </answer_toggle>
             </questionPanel>
-            <questionPanel answer="1">
+            <questionPanel answer="1" text="Вопрос 3">
                 <answer_toggle id="1">
                     Верный ответ
                 </answer_toggle>
@@ -113,7 +113,7 @@
                     Неверный ответ
                 </answer_toggle>
             </questionPanel>
-            <questionPanel answer="1">
+            <questionPanel answer="1" text="Вопрос 4">
                 <answer_toggle id="1">
                     Верный ответ
                 </answer_toggle>
