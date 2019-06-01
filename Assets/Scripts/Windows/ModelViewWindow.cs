@@ -40,7 +40,6 @@ public class ModelViewWindow : Window, IBeginDragHandler, IDragHandler, IEndDrag
     float rotSpeed = 300;
     public void OnDrag(PointerEventData eventData)
     {
-        print("drag");
         float rotX = Input.GetAxis("Mouse X") * rotSpeed * Mathf.Deg2Rad;
         float rotY = Input.GetAxis("Mouse Y") * rotSpeed * Mathf.Deg2Rad;
         Object.Rotate(rotY, -rotX, 0, Space.World);
